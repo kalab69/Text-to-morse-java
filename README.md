@@ -30,6 +30,7 @@ Enter your input.
 
 Decide whether to exit or continue.
 
-Example:
+Example:    
+
 Input: HELLO    
 Output: .... . .-.. .-.. ---
