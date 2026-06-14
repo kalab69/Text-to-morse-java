@@ -40,6 +40,68 @@ public class Main {
         convert.put('Y', "-.--");
         convert.put('Z', "--..");
         convert.put(' ',"/");
+
+        // Morse to word
+        HashMap<String,Character> rechange = new HashMap<>();
+        rechange.put("/",' ');
+        rechange.put(".-", 'A');
+        rechange.put("-...", 'B');
+        rechange.put("-.-.", 'C');
+        rechange.put("-..", 'D');
+        rechange.put(".", 'E');
+        rechange.put("..-.", 'F');
+        rechange.put("--.", 'G');
+        rechange.put("....", 'H');
+        rechange.put("..", 'I');
+        rechange.put(".---", 'J');
+        rechange.put("-.-", 'K');
+        rechange.put(".-..", 'L');
+        rechange.put("--", 'M');
+        rechange.put("-.", 'N');
+        rechange.put("---", 'O');
+        rechange.put(".--.", 'P');
+        rechange.put("--.-", 'Q');
+        rechange.put(".-.", 'R');
+        rechange.put("...", 'S');
+        rechange.put("-", 'T');
+        rechange.put("..-", 'U');
+        rechange.put("...-", 'V');
+        rechange.put(".--", 'W');
+        rechange.put("-..-", 'X');
+        rechange.put("-.--", 'Y');
+        rechange.put("--..", 'Z');
+        rechange.put("-----", '0');
+        rechange.put(".----", '1');
+        rechange.put("..---", '2');
+        rechange.put("...--", '3');
+        rechange.put("....-", '4');
+        rechange.put(".....", '5');
+        rechange.put("-....", '6');
+        rechange.put("--...", '7');
+        rechange.put("---..", '8');
+        rechange.put("----.", '9');
+        System.out.println("enter Morse code to be translated");
+        String code= sc.nextLine();
+        String icode="";
+        int p=0;
+        char last[]= new char[1000];
+        for (int i = 0; i < code.length(); i++) {
+
+            if (' '==code.charAt(i)){
+
+               last[p] = rechange.get(icode);
+               icode = "";
+               p++;
+            }else {
+                icode=icode+code.charAt(i);
+            }
+
+        }
+        last[p]= rechange.get(icode);
+
+        System.out.println(new String(last,0,p+1));
+
+
         System.out.println("enter a word and digits to be converted to Morse code");
         String word=sc.nextLine();
         String Morse="";
