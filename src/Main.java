@@ -39,7 +39,14 @@ public class Main {
         convert.put('X', "-..-");
         convert.put('Y', "-.--");
         convert.put('Z', "--..");
-        convert.put('/'," ");
+        convert.put(' ',"/");
+        System.out.println("enter a word and digits to be converted to Morse code");
+        String word=sc.nextLine();
+        String Morse="";
+        for (int i = 0; i < word.length(); i++) {
+            Morse += convert.get(word.toUpperCase().charAt(i))+" ";
+        }
+        System.out.println(Morse);
 
 
     }
