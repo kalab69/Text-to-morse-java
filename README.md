@@ -31,7 +31,5 @@ Enter your input.
 Decide whether to exit or continue.
 
 Example:
-
-Code
-Input: HELLO
+Input: HELLO    
 Output: .... . .-.. .-.. ---
