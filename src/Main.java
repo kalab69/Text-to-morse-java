@@ -1,7 +1,10 @@
-// text-to-morse
+import java.util.HashMap;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+
+        // word to Morse
         HashMap<Character,String> convert = new HashMap<>();
         convert.put('0',"-----");
         convert.put('1',".----");
